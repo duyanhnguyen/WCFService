@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/bootstrap-responsive.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/main.css" rel="stylesheet" />
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <link href="~/Content/wowhome.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery.js"></script>
+    <script src="~/Scripts/wowslider.js"></script>
+</head>
+<body style="background-color:#d7d7d7">
+    <!--HEADRER-->
+    <div class="header">
+        @Html.Partial("TopHeader")
+
+        @Html.Partial("Branch")
+
+        @Html.Partial("Menu")
+
+    </div>
+    <!--END-HEADRER-->
+
+    <div class="mainbody left-fl">
+        <div class="mainbody-content w1020px marginauto">
+            <div class="left-area w220px left-fl">
+                @Html.Partial("LocSanPham")               
+                @Html.Partial("GroupProduct")
+                @Html.Partial("Hotro")
+            </div>
+            <div class="right-area w775px left-fl pd10">
+                <div>                                                           
+                        <div class="content-right">
+                            @RenderBody()                                                        
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    @Html.Partial("Footer")
+</body>
+</html>
+  @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)

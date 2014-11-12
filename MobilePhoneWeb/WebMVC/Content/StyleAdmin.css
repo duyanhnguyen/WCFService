@@ -1,0 +1,28 @@
+﻿body            { padding: 0; margin: 0; font-family: Arial, Verdana,serif; font-size: 12px;}
+.main           {width: 1351px; padding: 0 1px; min-height: 500px; margin: 0 auto;}
+.content        {width: 1348px; min-height: 700px;}
+.content-right  {float: right; width:1119px; min-height: 800px; background:#f6f6f6;}
+.content-header {height: 90px; width: 1090px; background: #ffffff;}
+.content-body   {width: 1090px; min-height: 518px; background:#ffffff;padding-top:14px;}
+.content-main   {width:1090px; min-height: 600px; background:#f6f6f6;padding-left:15px;}
+
+.content-left    {float: left; width: 223px; min-height: 800px; background-image: url(images/content-left.gif); }
+.content-logo    {width: 223px; height:144px; }
+.content-menu    {float: right; width: 171px; height:380px; margin: 5px auto;}
+.box_logo_admin  {width:223px; height:70px;}
+.item_admin_name {float: right; padding: 20px 10px 10px 10px; color: #c3b9b9; font-size: 10px; }
+.box_admin_info  {width: 223px; height:88px;}
+.item-admin-name { float: right; width: 104px;height: 24px; padding-right:10px;font-size:14px;font-weight: bold; color: #ffffff;}
+.item-go-web { float: right; width: 104px;height: 24px; padding-right:10px;font-size:14px;font-weight: bold; color: #ffffff;}
+.item-exit { float: right; width: 104px;height: 24px; padding-right:10px;font-size:14px;font-weight: bold; color: #ffffff;}
+
+.box-renderbody  {width:1090px; min-height: 500px; background:#ffffff;}
+.box-render-title{ width: 1090px ;height:40px; border: 1px solid #cccccc; border-radius: 10px 10px 0 0; background:#f2f2f2; }
+.item-render-title{padding: 10px 10px 14px 14px; font-size: 16px; color: #b10000; font-weight: bold;padding: 5px 10px 5px 10px}
+.box-render-main {width:1070px; height:450px;border: 1px solid #cccccc; border-top-color: #f6f6f6; padding: 10px 10px 0px 10px}
+.table-view { width: 1044px; min-height: 115px;}
+.header-title { width: 1090px; min-height: 45px;font-weight:bold; padding-left:12px; padding-top:4px; }
+.float-left{float:left;}
+.float-right{float:right;padding-right: 10px}
+.Item-buttom{width:65px; height: 25px;}
+.box-error{width: 1090px; background:#ffd1d1; height:35px; border-radius: 5px 5px 5px 5px;border: 1px ridge #b20000; }

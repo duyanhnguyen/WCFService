@@ -1,0 +1,116 @@
+﻿@model WebMobile.Models.OrderModel
+<script src="~/Scripts/jquery-ui-1.8.24.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Scripts/jquery.validate.js"></script>
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+<link href="~/Content/Qstyle.css" rel="stylesheet" />
+<div class="right-order">
+    <div id="carttitle">
+        <h2>Phiếu đặt hàng</h2>
+     </div>
+
+    <div id="ctl00_MainContentHolder_pnlWholeCart">
+        <div id="cartcontainer">
+            <div>
+                <table id="ctl00_MainContentHolder_ItemGridView" class="cartproductgrid" border="0" style="width:100%; border-collapse:collapse; color:black; margin: 0px auto;">
+                    <thead class="head-cart">
+                        <tr>
+                            <th align="left" scope="col">Tên sản phẩm</th>
+                            <th align="right" scope="col">Đơn giá</th>
+                            <th style="width:100px;" align="right" scope="col">Số lượng</th>
+                            <th style="padding-left:20px;" align="right" scope="col">Thành tiền</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @foreach (var item in WebMobile.Models.MySession.GioHang)
+                        {
+                            <tr>
+                                <td style="width:200px;" class="productdetailscolumn" valign="top">
+                                    <div id="ctl00_MainContentHolder_ItemGridView_ctl02_cartitemdescription" class="cartitemdescription">
+                                        @Html.DisplayFor(m => item.NAME)
+                                    </div>
+                                </td>
+                                <td style="width:150px;" class="productpricecolumn" valign="top" align="right">
+                                    <span class="cartproductprice">@String.Format("{0:0,0}", Convert.ToInt32(item.PRICE))</span>
+                                </td>
+                                <td style="width:150px;" class="productquantitycolumn" valign="top" align="right">
+                                    @Html.DisplayFor(m => item.NUMBER)
+                                </td>
+                                <td style="padding-left:20px; width: 160px;" class="producttotalcolumn" valign="top" align="right">
+                                    <span class="lineitemnodiscounts"></span>
+                                    <span class="product-price">@String.Format("{0:0,0}", Convert.ToInt32(item.COUNT))</span>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!--Cat xuong duoi-->
+    </div>
+    <div class="cartfooter">
+        <div id="carttotals">
+            <table cellspacing="0" cellpadding="3" border="0">
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td width="20">           </td>
+                        <td class="formlabel"> Tổng tiền:</td>
+                        <td class="sumprice">
+                            <span id="ctl00_MainContentHolder_lblSubTotal">@String.Format("{0:0,0 Vnđ}", Convert.ToInt32(@WebMobile.Models.MySession.COUNT))</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+    <div class="left-order">
+        @using (Html.BeginForm("Create", "CreateOrder"))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true)
+            <fieldset>
+                <legend class="header">Thông tin khách hàng</legend>
+                <div class="editor-label">
+                </div>
+                <div class="editor-label">
+                    Họ tên khách hàng:
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Customer_Name)
+                    @Html.ValidationMessageFor(model => model.Customer_Name)
+                </div>
+                <div class="editor-label">
+                    Địa chỉ:
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Address)
+                    @Html.ValidationMessageFor(model => model.Address)
+                </div>
+                <div class="editor-label">
+                    Số điện thoại
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Phone)
+                    @Html.ValidationMessageFor(model => model.Phone)
+                </div>
+                <p>
+                    <input type="submit" class="submit_btn" value="Gửi Đơn Hàng" /> |
+                    @Html.ActionLink("Trở lại", "MyCart", "MyCart")
+                </p>
+
+            </fieldset>
+        }
+</div>
+<script src="~/Scripts/jquery-ui-1.8.24.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Scripts/jquery.validate.js"></script>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

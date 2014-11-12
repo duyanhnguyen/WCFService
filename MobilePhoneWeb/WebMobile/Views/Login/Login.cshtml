@@ -1,0 +1,70 @@
+﻿@{
+    Layout = null;
+}
+@model WebMobile.Models.TaiKhoan
+<!DOCTYPE html>
+
+<html>
+<body>
+    <div class="main">
+        <div class="content">
+            <div class="login">
+                <div class="item-login">
+                    <div class="float-left">
+                        <div>
+                            <a href="@Url.Action("Index","Index")">
+                                <img src="~/Images/Shop-Now-button.png" width="200" height="50" />
+                            </a>
+                           
+                        </div>
+                       
+                        
+                    </div>
+                    <div class="float-right">
+                        @using (Html.BeginForm("Login", "Login", FormMethod.Post))
+                        {
+                            Html.AntiForgeryToken();
+                            Html.ValidationSummary(true);
+                            <table>
+                                <tr>
+                                    <th>Tên người dùng:</th>
+                                    <th>Mật khẩu:</th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th>@Html.TextBoxFor(model => model.UserName)</th>
+                                    <th>@Html.EditorFor(model => model.PassWord)</th>
+                                    <th><input type="submit" value="Đăng nhập" /> @Html.ActionLink("Đăng ký tài khoản?", "LogOn", "Login")</th>
+                                </tr>
+                            </table>
+                        }
+                        @Html.Raw(ViewBag.Error)
+                        @if (Session["KtDangNhapDH"] != null)
+                        {
+                            <div style="color:white; font-weight:bold; font-size: 13px; padding:8px 5px;">         
+                                <a>Bạn cần đăng nhập để mua hàng!</a>
+                            </div>
+
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="logon">
+                <div class="item-logon">
+                    <div class="float-left">
+                        <img src="~/Images/phone_banner__78810.jpg" width="988" height="458" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+<link href="~/Content/Login.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-1.8.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery-ui-1.8.24.min.js"></script>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServiceNhaSanXuat" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:3015/ServiceNhaSanXuat.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:3015/ServiceNhaSanXuat.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:3015/ServiceNhaSanXuat.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfMobile" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServiceNhaSanXuat_SelectNhaSanXuat_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectNhaSanXuat" />
+  </wsdl:message>
+  <wsdl:message name="IServiceNhaSanXuat_SelectNhaSanXuat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectNhaSanXuatResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceNhaSanXuat_InsertNhaSanXuat_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertNhaSanXuat" />
+  </wsdl:message>
+  <wsdl:message name="IServiceNhaSanXuat_InsertNhaSanXuat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertNhaSanXuatResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceNhaSanXuat_UpdateNhaSanXuat_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNhaSanXuat" />
+  </wsdl:message>
+  <wsdl:message name="IServiceNhaSanXuat_UpdateNhaSanXuat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNhaSanXuatResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceNhaSanXuat_DeleteNhaSanXuat_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteNhaSanXuat" />
+  </wsdl:message>
+  <wsdl:message name="IServiceNhaSanXuat_DeleteNhaSanXuat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteNhaSanXuatResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceNhaSanXuat_SelectNhaSanXuatById_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectNhaSanXuatById" />
+  </wsdl:message>
+  <wsdl:message name="IServiceNhaSanXuat_SelectNhaSanXuatById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectNhaSanXuatByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceNhaSanXuat_GetListTKNSX_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListTKNSX" />
+  </wsdl:message>
+  <wsdl:message name="IServiceNhaSanXuat_GetListTKNSX_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListTKNSXResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServiceNhaSanXuat">
+    <wsdl:operation name="SelectNhaSanXuat">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceNhaSanXuat/SelectNhaSanXuat" message="tns:IServiceNhaSanXuat_SelectNhaSanXuat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceNhaSanXuat/SelectNhaSanXuatResponse" message="tns:IServiceNhaSanXuat_SelectNhaSanXuat_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertNhaSanXuat">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceNhaSanXuat/InsertNhaSanXuat" message="tns:IServiceNhaSanXuat_InsertNhaSanXuat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceNhaSanXuat/InsertNhaSanXuatResponse" message="tns:IServiceNhaSanXuat_InsertNhaSanXuat_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateNhaSanXuat">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceNhaSanXuat/UpdateNhaSanXuat" message="tns:IServiceNhaSanXuat_UpdateNhaSanXuat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceNhaSanXuat/UpdateNhaSanXuatResponse" message="tns:IServiceNhaSanXuat_UpdateNhaSanXuat_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteNhaSanXuat">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceNhaSanXuat/DeleteNhaSanXuat" message="tns:IServiceNhaSanXuat_DeleteNhaSanXuat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceNhaSanXuat/DeleteNhaSanXuatResponse" message="tns:IServiceNhaSanXuat_DeleteNhaSanXuat_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectNhaSanXuatById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceNhaSanXuat/SelectNhaSanXuatById" message="tns:IServiceNhaSanXuat_SelectNhaSanXuatById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceNhaSanXuat/SelectNhaSanXuatByIdResponse" message="tns:IServiceNhaSanXuat_SelectNhaSanXuatById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListTKNSX">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceNhaSanXuat/GetListTKNSX" message="tns:IServiceNhaSanXuat_GetListTKNSX_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceNhaSanXuat/GetListTKNSXResponse" message="tns:IServiceNhaSanXuat_GetListTKNSX_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServiceNhaSanXuat" type="tns:IServiceNhaSanXuat">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SelectNhaSanXuat">
+      <soap:operation soapAction="http://tempuri.org/IServiceNhaSanXuat/SelectNhaSanXuat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertNhaSanXuat">
+      <soap:operation soapAction="http://tempuri.org/IServiceNhaSanXuat/InsertNhaSanXuat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateNhaSanXuat">
+      <soap:operation soapAction="http://tempuri.org/IServiceNhaSanXuat/UpdateNhaSanXuat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteNhaSanXuat">
+      <soap:operation soapAction="http://tempuri.org/IServiceNhaSanXuat/DeleteNhaSanXuat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectNhaSanXuatById">
+      <soap:operation soapAction="http://tempuri.org/IServiceNhaSanXuat/SelectNhaSanXuatById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListTKNSX">
+      <soap:operation soapAction="http://tempuri.org/IServiceNhaSanXuat/GetListTKNSX" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceNhaSanXuat">
+    <wsdl:port name="BasicHttpBinding_IServiceNhaSanXuat" binding="tns:BasicHttpBinding_IServiceNhaSanXuat">
+      <soap:address location="http://localhost:3015/ServiceNhaSanXuat.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

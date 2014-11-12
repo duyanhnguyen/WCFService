@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServiceDonHang" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:3015/ServiceDonHang.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:3015/ServiceDonHang.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:3015/ServiceDonHang.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfMobile" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServiceDonHang_SelectDonHang_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectDonHang" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDonHang_SelectDonHang_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectDonHangResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDonHang_InsertDonHang_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertDonHang" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDonHang_InsertDonHang_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertDonHangResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDonHang_UpdateDonHang_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDonHang" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDonHang_UpdateDonHang_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDonHangResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDonHang_SelectCTDH_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectCTDH" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDonHang_SelectCTDH_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectCTDHResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDonHang_InsertCTDH_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCTDH" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDonHang_InsertCTDH_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCTDHResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDonHang_UpdateCTDH_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCTDH" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDonHang_UpdateCTDH_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCTDHResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDonHang_SelectDonHangKhachHang_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectDonHangKhachHang" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDonHang_SelectDonHangKhachHang_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectDonHangKhachHangResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDonHang_SelectCT_DonHangByDonHang_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectCT_DonHangByDonHang" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDonHang_SelectCT_DonHangByDonHang_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectCT_DonHangByDonHangResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDonHang_UpdateTinhTrangDonHang_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTinhTrangDonHang" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDonHang_UpdateTinhTrangDonHang_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTinhTrangDonHangResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDonHang_UpdateSoLuongSanPham_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSoLuongSanPham" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDonHang_UpdateSoLuongSanPham_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSoLuongSanPhamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDonHang_BaocaoNgay_InputMessage">
+    <wsdl:part name="parameters" element="tns:BaocaoNgay" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDonHang_BaocaoNgay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BaocaoNgayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDonHang_ThongkeNVThang_InputMessage">
+    <wsdl:part name="parameters" element="tns:ThongkeNVThang" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDonHang_ThongkeNVThang_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ThongkeNVThangResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDonHang_ThongkeSPThang_InputMessage">
+    <wsdl:part name="parameters" element="tns:ThongkeSPThang" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDonHang_ThongkeSPThang_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ThongkeSPThangResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServiceDonHang">
+    <wsdl:operation name="SelectDonHang">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDonHang/SelectDonHang" message="tns:IServiceDonHang_SelectDonHang_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDonHang/SelectDonHangResponse" message="tns:IServiceDonHang_SelectDonHang_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDonHang">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDonHang/InsertDonHang" message="tns:IServiceDonHang_InsertDonHang_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDonHang/InsertDonHangResponse" message="tns:IServiceDonHang_InsertDonHang_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDonHang">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDonHang/UpdateDonHang" message="tns:IServiceDonHang_UpdateDonHang_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDonHang/UpdateDonHangResponse" message="tns:IServiceDonHang_UpdateDonHang_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectCTDH">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDonHang/SelectCTDH" message="tns:IServiceDonHang_SelectCTDH_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDonHang/SelectCTDHResponse" message="tns:IServiceDonHang_SelectCTDH_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCTDH">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDonHang/InsertCTDH" message="tns:IServiceDonHang_InsertCTDH_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDonHang/InsertCTDHResponse" message="tns:IServiceDonHang_InsertCTDH_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCTDH">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDonHang/UpdateCTDH" message="tns:IServiceDonHang_UpdateCTDH_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDonHang/UpdateCTDHResponse" message="tns:IServiceDonHang_UpdateCTDH_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectDonHangKhachHang">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDonHang/SelectDonHangKhachHang" message="tns:IServiceDonHang_SelectDonHangKhachHang_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDonHang/SelectDonHangKhachHangResponse" message="tns:IServiceDonHang_SelectDonHangKhachHang_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectCT_DonHangByDonHang">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDonHang/SelectCT_DonHangByDonHang" message="tns:IServiceDonHang_SelectCT_DonHangByDonHang_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDonHang/SelectCT_DonHangByDonHangResponse" message="tns:IServiceDonHang_SelectCT_DonHangByDonHang_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTinhTrangDonHang">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDonHang/UpdateTinhTrangDonHang" message="tns:IServiceDonHang_UpdateTinhTrangDonHang_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDonHang/UpdateTinhTrangDonHangResponse" message="tns:IServiceDonHang_UpdateTinhTrangDonHang_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSoLuongSanPham">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDonHang/UpdateSoLuongSanPham" message="tns:IServiceDonHang_UpdateSoLuongSanPham_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDonHang/UpdateSoLuongSanPhamResponse" message="tns:IServiceDonHang_UpdateSoLuongSanPham_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BaocaoNgay">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDonHang/BaocaoNgay" message="tns:IServiceDonHang_BaocaoNgay_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDonHang/BaocaoNgayResponse" message="tns:IServiceDonHang_BaocaoNgay_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ThongkeNVThang">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDonHang/ThongkeNVThang" message="tns:IServiceDonHang_ThongkeNVThang_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDonHang/ThongkeNVThangResponse" message="tns:IServiceDonHang_ThongkeNVThang_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ThongkeSPThang">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDonHang/ThongkeSPThang" message="tns:IServiceDonHang_ThongkeSPThang_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDonHang/ThongkeSPThangResponse" message="tns:IServiceDonHang_ThongkeSPThang_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServiceDonHang" type="tns:IServiceDonHang">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SelectDonHang">
+      <soap:operation soapAction="http://tempuri.org/IServiceDonHang/SelectDonHang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDonHang">
+      <soap:operation soapAction="http://tempuri.org/IServiceDonHang/InsertDonHang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDonHang">
+      <soap:operation soapAction="http://tempuri.org/IServiceDonHang/UpdateDonHang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectCTDH">
+      <soap:operation soapAction="http://tempuri.org/IServiceDonHang/SelectCTDH" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCTDH">
+      <soap:operation soapAction="http://tempuri.org/IServiceDonHang/InsertCTDH" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCTDH">
+      <soap:operation soapAction="http://tempuri.org/IServiceDonHang/UpdateCTDH" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectDonHangKhachHang">
+      <soap:operation soapAction="http://tempuri.org/IServiceDonHang/SelectDonHangKhachHang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectCT_DonHangByDonHang">
+      <soap:operation soapAction="http://tempuri.org/IServiceDonHang/SelectCT_DonHangByDonHang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTinhTrangDonHang">
+      <soap:operation soapAction="http://tempuri.org/IServiceDonHang/UpdateTinhTrangDonHang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSoLuongSanPham">
+      <soap:operation soapAction="http://tempuri.org/IServiceDonHang/UpdateSoLuongSanPham" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BaocaoNgay">
+      <soap:operation soapAction="http://tempuri.org/IServiceDonHang/BaocaoNgay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ThongkeNVThang">
+      <soap:operation soapAction="http://tempuri.org/IServiceDonHang/ThongkeNVThang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ThongkeSPThang">
+      <soap:operation soapAction="http://tempuri.org/IServiceDonHang/ThongkeSPThang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceDonHang">
+    <wsdl:port name="BasicHttpBinding_IServiceDonHang" binding="tns:BasicHttpBinding_IServiceDonHang">
+      <soap:address location="http://localhost:3015/ServiceDonHang.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

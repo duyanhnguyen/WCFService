@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3573380313144cd4bedd6033a032b6d3" Name="Diagram1">
+        <EntityTypeShape EntityType="QL_DienThoaiModel.CT_DonHang" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_DienThoaiModel.CT_PhieuNhap" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_DienThoaiModel.DonHang" Width="1.5" PointX="3" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_DienThoaiModel.KhachHang" Width="1.5" PointX="0.75" PointY="19.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_DienThoaiModel.NhanVien" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_DienThoaiModel.NhaPhanPhoi" Width="1.5" PointX="0.75" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_DienThoaiModel.NhaSanXuat" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_DienThoaiModel.PhieuNhap" Width="1.5" PointX="3" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_DienThoaiModel.QuyenNhanVien" Width="1.5" PointX="1.5" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_DienThoaiModel.SanPham" Width="1.5" PointX="3" PointY="3.375" IsExpanded="true" />
+        <AssociationConnector Association="QL_DienThoaiModel.FK_CT_DonHang_DonHang" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_DienThoaiModel.FK_CT_DonHang_SP" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_DienThoaiModel.FK_CT_PhieuNhap_PhieuNhap" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_DienThoaiModel.FK_CT_PhieuNhap_SP" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_DienThoaiModel.FK_DonHang_KhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_DienThoaiModel.FK_DonHang_NhanVien" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_DienThoaiModel.FK_NhanVien_QuyenNhanVien" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_DienThoaiModel.FK_PhieuNhap_NhanVien" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_DienThoaiModel.FK_PhieuNhap_NhaPhanPhoi" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_DienThoaiModel.FK_SP_NSX" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

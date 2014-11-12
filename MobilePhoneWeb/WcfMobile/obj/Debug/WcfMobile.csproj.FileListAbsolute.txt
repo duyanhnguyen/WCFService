@@ -1,0 +1,43 @@
+D:\Tai lieu\WEB SERVICE\Projects\WcfMobileWeb\WcfMobile\bin\WcfMobile.dll
+D:\Tai lieu\WEB SERVICE\Projects\WcfMobileWeb\WcfMobile\bin\WcfMobile.pdb
+D:\Tai lieu\WEB SERVICE\Projects\WcfMobileWeb\WcfMobile\bin\EntityFramework.dll
+D:\Tai lieu\WEB SERVICE\Projects\WcfMobileWeb\WcfMobile\bin\EntityFramework.xml
+D:\Tai lieu\WEB SERVICE\Projects\WcfMobileWeb\WcfMobile\obj\Debug\WcfMobile.dll
+D:\Tai lieu\WEB SERVICE\Projects\WcfMobileWeb\WcfMobile\obj\Debug\WcfMobile.pdb
+D:\Tai lieu\WEB SERVICE\Projects\WcfMobileWeb\WcfMobile\obj\Debug\WcfMobile.csprojResolveAssemblyReference.cache
+D:\Tai lieu\WEB SERVICE\Projects\MobilePhoneWeb\WcfMobile\bin\WcfMobile.dll
+D:\Tai lieu\WEB SERVICE\Projects\MobilePhoneWeb\WcfMobile\bin\WcfMobile.pdb
+D:\Tai lieu\WEB SERVICE\Projects\MobilePhoneWeb\WcfMobile\bin\EntityFramework.dll
+D:\Tai lieu\WEB SERVICE\Projects\MobilePhoneWeb\WcfMobile\bin\EntityFramework.xml
+D:\Tai lieu\WEB SERVICE\Projects\MobilePhoneWeb\WcfMobile\obj\Debug\WcfMobile.dll
+D:\Tai lieu\WEB SERVICE\Projects\MobilePhoneWeb\WcfMobile\obj\Debug\WcfMobile.pdb
+D:\Tai lieu\WEB SERVICE\Projects\MobilePhoneWeb\WcfMobile\obj\Debug\WcfMobile.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\MobilePhoneWeb1\MobilePhoneWeb\WcfMobile\bin\WcfMobile.dll
+C:\Users\Admin\Desktop\MobilePhoneWeb1\MobilePhoneWeb\WcfMobile\bin\WcfMobile.pdb
+C:\Users\Admin\Desktop\MobilePhoneWeb1\MobilePhoneWeb\WcfMobile\bin\EntityFramework.dll
+C:\Users\Admin\Desktop\MobilePhoneWeb1\MobilePhoneWeb\WcfMobile\bin\EntityFramework.xml
+C:\Users\Admin\Desktop\MobilePhoneWeb1\MobilePhoneWeb\WcfMobile\obj\Debug\WcfMobile.dll
+C:\Users\Admin\Desktop\MobilePhoneWeb1\MobilePhoneWeb\WcfMobile\obj\Debug\WcfMobile.pdb
+C:\Users\minhduc\Downloads\Compressed\MobilePhoneWeb1\MobilePhoneWeb1\MobilePhoneWeb\WcfMobile\bin\WcfMobile.dll.config
+C:\Users\minhduc\Downloads\Compressed\MobilePhoneWeb1\MobilePhoneWeb1\MobilePhoneWeb\WcfMobile\bin\WcfMobile.dll
+C:\Users\minhduc\Downloads\Compressed\MobilePhoneWeb1\MobilePhoneWeb1\MobilePhoneWeb\WcfMobile\bin\WcfMobile.pdb
+C:\Users\minhduc\Downloads\Compressed\MobilePhoneWeb1\MobilePhoneWeb1\MobilePhoneWeb\WcfMobile\bin\EntityFramework.dll
+C:\Users\minhduc\Downloads\Compressed\MobilePhoneWeb1\MobilePhoneWeb1\MobilePhoneWeb\WcfMobile\bin\EntityFramework.xml
+C:\Users\minhduc\Downloads\Compressed\MobilePhoneWeb1\MobilePhoneWeb1\MobilePhoneWeb\WcfMobile\obj\Debug\WcfMobile.dll
+C:\Users\minhduc\Downloads\Compressed\MobilePhoneWeb1\MobilePhoneWeb1\MobilePhoneWeb\WcfMobile\obj\Debug\WcfMobile.pdb
+E:\WCF\MobilePhoneWeb1\MobilePhoneWeb1\MobilePhoneWeb\WcfMobile\obj\Debug\WcfMobile.dll
+E:\WCF\MobilePhoneWeb1\MobilePhoneWeb1\MobilePhoneWeb\WcfMobile\bin\WcfMobile.dll.config
+E:\WCF\MobilePhoneWeb1\MobilePhoneWeb1\MobilePhoneWeb\WcfMobile\bin\WcfMobile.dll
+E:\WCF\MobilePhoneWeb1\MobilePhoneWeb1\MobilePhoneWeb\WcfMobile\bin\WcfMobile.pdb
+E:\WCF\MobilePhoneWeb1\MobilePhoneWeb1\MobilePhoneWeb\WcfMobile\bin\EntityFramework.dll
+E:\WCF\MobilePhoneWeb1\MobilePhoneWeb1\MobilePhoneWeb\WcfMobile\bin\EntityFramework.xml
+E:\WCF\MobilePhoneWeb1\MobilePhoneWeb1\MobilePhoneWeb\WcfMobile\obj\Debug\WcfMobile.pdb
+E:\WCF\MobilePhoneWeb1\MobilePhoneWeb1\MobilePhoneWeb\WcfMobile\obj\Debug\WcfMobile.csprojResolveAssemblyReference.cache
+E:\WCF\MobilePhoneWeb\WcfMobile\bin\WcfMobile.dll.config
+E:\WCF\MobilePhoneWeb\WcfMobile\bin\WcfMobile.dll
+E:\WCF\MobilePhoneWeb\WcfMobile\bin\WcfMobile.pdb
+E:\WCF\MobilePhoneWeb\WcfMobile\bin\EntityFramework.dll
+E:\WCF\MobilePhoneWeb\WcfMobile\bin\EntityFramework.xml
+E:\WCF\MobilePhoneWeb\WcfMobile\obj\Debug\WcfMobile.dll
+E:\WCF\MobilePhoneWeb\WcfMobile\obj\Debug\WcfMobile.pdb
+E:\WCF\MobilePhoneWeb\WcfMobile\obj\Debug\WcfMobile.csprojResolveAssemblyReference.cache

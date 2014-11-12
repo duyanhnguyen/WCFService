@@ -1,0 +1,40 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Category";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+@model IPagedList<WebMobile.ServiceReferenceProduct.Product>
+<div class="group product clearfix">
+    <div class="header2">
+        <span class="title">
+            <span>
+                <a href="/dien-thoai/maxfone-22.aspx">@ViewBag.Category</a>
+            </span>
+        </span>
+    </div>
+</div>
+<div class="box-pro-home">
+    @foreach (var pro in Model)
+    {
+        <div class="item-pro-home">
+            <div class="box-img-pro-home">
+                <a href="@Url.Action("Details", "Index", new { id = pro.Id })" target=" _blank">
+                    <img src="~/Images/Product/@pro.Image" alt="Image" />
+                </a>
+            </div>
+            <a href="@Url.Action("Details", "Index", new { id = pro.Id })" target="_blank">
+                @pro.Name
+            </a>
+            <p>@String.Format("{0:0,0 VNĐ}", Convert.ToInt32(pro.Price))</p>
+            <a href="@Url.Action("addtocart", "mycart", new { id = pro.Id })">
+                <input name="btnMuaHang" class="btn-muahang" type="button" value="Mua hàng" />
+            </a>
+        </div>        
+    }
+</div>
+<div class="Paged">
+    @Html.PagedListPager(Model, page => Url.Action("Category", "Index", new { page }))
+</div>
+
+<link href="~/Content/PagedList.css" rel="stylesheet" />

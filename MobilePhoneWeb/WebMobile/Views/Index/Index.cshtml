@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+@model IEnumerable<WebMobile.ServiceReferenceSanPham.SanPham>
+<div id="wowslider-container1">
+    <div class="ws_images">
+        <ul>
+            <li><img src="~/Images/slider/1.jpg" alt="1" title="1" id="wows1_0" /></li>
+            <li><img src="~/Images/slider/2.jpg" alt="2" title="2" id="wows1_1" /></li>
+        </ul>
+    </div>
+    <div class="ws_bullets">
+        <div>
+            <a href="#" title="1">1</a>
+            <a href="#" title="2">2</a>
+
+        </div>
+    </div>
+    <span class="wsl"><a href="#">Carousel Plugin</a>Ashita Mata</span>
+    <div class="ws_shadow"></div>
+</div>
+<div class="clear wp100"></div>
+<div class="clea "></div>
+
+<div class="group product clearfix">
+    <div class="header2">
+        <span class="title">
+            <span>
+                <a href="/dien-thoai/maxfone-22.aspx">Sản Phẩm Mới Nhất</a>
+            </span>
+        </span>
+    </div>
+</div>
+<div class="box-pro-home">
+    @foreach (var pro in Model)
+    {
+        <div class="item-pro-home">
+            <div class="box-img-pro-home">
+                <a href="@Url.Action("Details", "Index", new { id = pro.MaSP })" target=" _blank">
+                    <img src="~/Images/Product/@pro.UrlHinh"/>
+                </a>
+            </div>
+            <a href="@Url.Action("Details", "Index", new { id = pro.MaSP })" target="_blank">
+                @pro.TenSP
+            </a>
+            <p>@String.Format("{0:0,0 VNĐ}", Convert.ToInt32(pro.Gia))</p>
+            <a href="@Url.Action("addtocart", "mycart", new { id = pro.MaSP })">
+                <input name="btnMuaHang" class="btn-muahang" type="button" value="Mua hàng" />
+            </a>
+        </div>
+    }
+</div>
+@*@{Html.RenderPartial("SPcaocap");}*@
+@{Html.RenderAction("SPcaocap", "Index");}

@@ -1,0 +1,60 @@
+﻿@model WebMobile.Models.Products
+@using WebMobile.ServiceReferenceSanPham
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+<div class="group product clearfix">
+    <div class="header2">
+        <span class="title">
+            <span>
+                <a href="/dien-thoai/maxfone-22.aspx">Chi tiết sản phẩm</a>
+            </span>
+        </span>
+    </div>
+</div>
+<div class="box-pro">
+    <div class="content-pro">
+        <div class="float-left">
+            <div class="Item-Img">
+                <img src="~/Images/Product/@Model.IMAGES" width="300" height="200" />
+            </div>
+        </div>
+        <div class="float-right">
+            <div class="Item-details">
+                   <table align="left">
+                       <tr>
+                           <th colspan="2">
+                                <h2>@Model.NAME</h2>
+                           </th>
+                       </tr>
+                       <tr>
+                           <th>
+                               Giá: @String.Format("{0:0,0 VNĐ}", Convert.ToInt32(Model.PRICE))
+                           </th>
+                       </tr>
+                       <tr>
+                           <th>
+                               Chi tiết: 
+                           </th>
+                       </tr>
+                       <tr>
+                           <th >
+                               <h3>@Model.DETAILS</h3>
+                           </th>
+                       </tr>
+                       <tr>
+                           <th>
+                               <h3>@Html.ActionLink("Thêm vào giỏ", "addtocart", "mycart", new { id = Model.ID }, new { @Style = "font-weight:bold; color:#ff6a00" })</h3> 
+                           </th>
+                       </tr>
+                   </table>
+                
+                </div>
+            </div>
+        </div>
+        <div>
+           
+    </div>
+</div>
+<link href="~/Content/StyleProDetails.css" rel="stylesheet" />

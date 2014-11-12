@@ -1,0 +1,75 @@
+﻿@{
+    ViewBag.Title = "ChangeInfo";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+@model WebMobile.Models.DoiMatKhau
+<div class="group product clearfix">
+    <div class="header2">
+        <span class="title">
+            <span>
+                <a>Đăng ký Tài Khoản</a>
+            </span>
+        </span>
+    </div>
+</div>
+<div class="box-pro-home">
+    <div style="height:100%; width: 100%; text-align: right; padding-left:6px">
+        @using (Html.BeginForm("ChangeInfo", "Login", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true)
+            <table class="table-condensed">
+                <tbody>
+                    <tr>
+                        <td colspan="3" style="color:#d80b0b; text-align:left"><h3>Nhập thông tin:</h3></td>
+                    </tr>
+                    <tr>
+                        <td>Tên người dùng:</td>
+                        <td>@Html.TextBoxFor(model => model.Name)<br /></td>
+                        <td style="text-align:left">@Html.ValidationMessageFor(model => model.Name)</td>
+                    </tr>
+                    <tr>
+                        <td>Mật khẩu:</td>
+                        <td>@Html.EditorFor(model => model.PassWord)</td>
+                        <td style="text-align:left">@Html.ValidationMessageFor(model => model.PassWord)</td>
+                    </tr>
+                    <tr>
+                        <td>Nhập lại mật khẩu:</td>
+                        <td>@Html.EditorFor(model => model.ConfirmPassword)</td>
+                        <td style="text-align:left">@Html.ValidationMessageFor(model => model.ConfirmPassword)</td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td>@Html.TextBoxFor(model => model.Email)</td>
+                        <td style="text-align:left">@Html.ValidationMessageFor(model => model.Email)</td>
+                    </tr>
+                    <tr>
+                        <td>Số điện thoại:</td>
+                        <td>@Html.TextBoxFor(model => model.Phone)</td>
+                        <td style="text-align:left">@Html.ValidationMessageFor(model => model.Phone)</td>
+                    </tr>
+                    <tr>
+                        <td>Địa chỉ:</td>
+                        <td>@Html.TextBoxFor(model => model.Address)</td>
+                        <td style="text-align:left">@Html.ValidationMessageFor(model => model.Address)</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td align="left">
+                            <input type="submit" value="Lưu thay đổi" class="btn-default"> |
+                            @Html.ActionLink("Trở về", "CustomerInfo")
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        }
+    </div>
+
+</div>
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+}
+<script src="~/Scripts/jquery-1.8.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+<link href="~/Content/Site.css" rel="stylesheet" />

@@ -1,0 +1,30 @@
+﻿@{
+    WebMobile.ServiceReferenceNSX.ServiceNhaSanXuatClient db = new WebMobile.ServiceReferenceNSX.ServiceNhaSanXuatClient();
+    ViewBag.Status = new SelectList(db.GetListTKNSX(),"MaNSX","TenNSX",0);
+}
+<div class="block menu-list supportlive">
+    <h4 class="pd5x10 ">Tìm kiếm</h4>
+    <ul class="nav nav-list w190px ">
+        <div class="show" style="padding-top:10px; padding-bottom: 6px;">
+            @using (Html.BeginForm("Timkiem", "Index", FormMethod.Post))
+            {
+                @Html.DropDownList("group_id", (SelectList)ViewBag.Status, new { style = "height:28px;width:200px;" })
+                    <select name="giatu" style="height:28px;width:200px;">
+                        <option value="0">-Giá từ-</option>
+                        <option value="1000000">1 triệu đ</option>
+                        <option value="3000000">3 triệu đ</option>
+                        <option value="5000000">5 triệu đ</option>
+                        <option value="7000000">Trên 7 triệu đ</option>
+                    </select>
+                    <select name="den" style="height:28px;width:200px;">
+                        <option value="0">-Giá đến-</option>
+                        <option value="3000000">3 triệu đ</option>
+                        <option value="5000000">5 triệu đ</option>
+                        <option value="7000000">7 triệu đ</option>
+                        <option value="10000000">10 triệu</option>
+                    </select>  
+                    <input type="image" src="~/Images/btn_search.gif">    
+            }
+        </div>
+    </ul>
+</div>

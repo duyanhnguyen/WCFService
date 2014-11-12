@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServiceSanPham" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:3015/ServiceSanPham.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:3015/ServiceSanPham.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:3015/ServiceSanPham.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfMobile" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServiceSanPham_SelectSanPham_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSanPham" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSanPham_SelectSanPham_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSanPhamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSanPham_Category_InputMessage">
+    <wsdl:part name="parameters" element="tns:Category" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSanPham_Category_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSanPham_SelectSanPhamTheoNSX_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSanPhamTheoNSX" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSanPham_SelectSanPhamTheoNSX_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSanPhamTheoNSXResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSanPham_InsertSanPham_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertSanPham" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSanPham_InsertSanPham_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertSanPhamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSanPham_UpdateSanPham_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSanPham" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSanPham_UpdateSanPham_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSanPhamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSanPham_DeleteSanPham_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSanPham" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSanPham_DeleteSanPham_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSanPhamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSanPham_SelectSanPhamByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSanPhamByID" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSanPham_SelectSanPhamByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSanPhamByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSanPham_SelectSanPhamByCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSanPhamByCategory" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSanPham_SelectSanPhamByCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSanPhamByCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSanPham_DetailSanPham_InputMessage">
+    <wsdl:part name="parameters" element="tns:DetailSanPham" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSanPham_DetailSanPham_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DetailSanPhamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSanPham_SearchSanPham_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchSanPham" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSanPham_SearchSanPham_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchSanPhamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSanPham_GetSPbyID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSPbyID" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSanPham_GetSPbyID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSPbyIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSanPham_GetListTKNSX_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListTKNSX" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSanPham_GetListTKNSX_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListTKNSXResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServiceSanPham">
+    <wsdl:operation name="SelectSanPham">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceSanPham/SelectSanPham" message="tns:IServiceSanPham_SelectSanPham_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceSanPham/SelectSanPhamResponse" message="tns:IServiceSanPham_SelectSanPham_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Category">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceSanPham/Category" message="tns:IServiceSanPham_Category_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceSanPham/CategoryResponse" message="tns:IServiceSanPham_Category_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectSanPhamTheoNSX">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceSanPham/SelectSanPhamTheoNSX" message="tns:IServiceSanPham_SelectSanPhamTheoNSX_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceSanPham/SelectSanPhamTheoNSXResponse" message="tns:IServiceSanPham_SelectSanPhamTheoNSX_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertSanPham">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceSanPham/InsertSanPham" message="tns:IServiceSanPham_InsertSanPham_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceSanPham/InsertSanPhamResponse" message="tns:IServiceSanPham_InsertSanPham_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSanPham">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceSanPham/UpdateSanPham" message="tns:IServiceSanPham_UpdateSanPham_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceSanPham/UpdateSanPhamResponse" message="tns:IServiceSanPham_UpdateSanPham_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSanPham">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceSanPham/DeleteSanPham" message="tns:IServiceSanPham_DeleteSanPham_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceSanPham/DeleteSanPhamResponse" message="tns:IServiceSanPham_DeleteSanPham_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectSanPhamByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceSanPham/SelectSanPhamByID" message="tns:IServiceSanPham_SelectSanPhamByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceSanPham/SelectSanPhamByIDResponse" message="tns:IServiceSanPham_SelectSanPhamByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectSanPhamByCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceSanPham/SelectSanPhamByCategory" message="tns:IServiceSanPham_SelectSanPhamByCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceSanPham/SelectSanPhamByCategoryResponse" message="tns:IServiceSanPham_SelectSanPhamByCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DetailSanPham">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceSanPham/DetailSanPham" message="tns:IServiceSanPham_DetailSanPham_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceSanPham/DetailSanPhamResponse" message="tns:IServiceSanPham_DetailSanPham_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchSanPham">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceSanPham/SearchSanPham" message="tns:IServiceSanPham_SearchSanPham_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceSanPham/SearchSanPhamResponse" message="tns:IServiceSanPham_SearchSanPham_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSPbyID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceSanPham/GetSPbyID" message="tns:IServiceSanPham_GetSPbyID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceSanPham/GetSPbyIDResponse" message="tns:IServiceSanPham_GetSPbyID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListTKNSX">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceSanPham/GetListTKNSX" message="tns:IServiceSanPham_GetListTKNSX_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceSanPham/GetListTKNSXResponse" message="tns:IServiceSanPham_GetListTKNSX_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServiceSanPham" type="tns:IServiceSanPham">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SelectSanPham">
+      <soap:operation soapAction="http://tempuri.org/IServiceSanPham/SelectSanPham" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Category">
+      <soap:operation soapAction="http://tempuri.org/IServiceSanPham/Category" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectSanPhamTheoNSX">
+      <soap:operation soapAction="http://tempuri.org/IServiceSanPham/SelectSanPhamTheoNSX" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertSanPham">
+      <soap:operation soapAction="http://tempuri.org/IServiceSanPham/InsertSanPham" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSanPham">
+      <soap:operation soapAction="http://tempuri.org/IServiceSanPham/UpdateSanPham" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSanPham">
+      <soap:operation soapAction="http://tempuri.org/IServiceSanPham/DeleteSanPham" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectSanPhamByID">
+      <soap:operation soapAction="http://tempuri.org/IServiceSanPham/SelectSanPhamByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectSanPhamByCategory">
+      <soap:operation soapAction="http://tempuri.org/IServiceSanPham/SelectSanPhamByCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DetailSanPham">
+      <soap:operation soapAction="http://tempuri.org/IServiceSanPham/DetailSanPham" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchSanPham">
+      <soap:operation soapAction="http://tempuri.org/IServiceSanPham/SearchSanPham" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSPbyID">
+      <soap:operation soapAction="http://tempuri.org/IServiceSanPham/GetSPbyID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListTKNSX">
+      <soap:operation soapAction="http://tempuri.org/IServiceSanPham/GetListTKNSX" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceSanPham">
+    <wsdl:port name="BasicHttpBinding_IServiceSanPham" binding="tns:BasicHttpBinding_IServiceSanPham">
+      <soap:address location="http://localhost:3015/ServiceSanPham.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

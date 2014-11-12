@@ -1,0 +1,68 @@
+﻿@model IEnumerable<WebMobile.ServiceReferenceCreateOrder.Order>
+@if (Session["Name"] != null)
+{
+    ViewBag.Title = "Hóa Đơn";
+    ViewBag.Table1 = "Danh Sách Hóa Đơn";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    <div class="table-responsive">
+
+        <div class="Item-buttom">
+            <div class="float-left">
+            </div>
+        </div>
+        <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+            <thead>
+                <tr>
+                    <th>Mã hóa đơn</th>
+                    <th>Tên khách hàng</th>
+                    <th>Tình Trạng</th>
+                    <th>Địa chỉ</th>
+                    <th>Số điện thoại</th>
+                    <th>Tổng tiền</th>
+                    <th>Ngày</th>
+                    <th>Trạng Thái</th>
+                    <th>Tùy chọn</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @{
+    foreach (var pro in Model)
+    {
+        <tr class="even gradeC">
+            <th>@pro.Id</th>
+            <th>@pro.Customer_Name</th>
+            <th>@pro.Status</th>
+            <th>@pro.Address</th>
+            <th>@pro.Phone</th>
+            <th>@pro.TotalMoney</th>
+            <th>@pro.Date.Value.ToShortDateString()</th>
+            @if (pro.Status == "Đã giao" | pro.Status == "Hủy")
+            {
+                <th></th>
+            }
+            else
+            {
+                <th>
+                    @Html.ActionLink("Đổi", "ChangeStatus/" + pro.Id, "CreateOrder") | @Html.ActionLink("Hủy", "CancelOrder/" + pro.Id, "CreateOrder", null, new { onclick = "return confirm('Bạn có chắc hủy hóa đơn này, sau khi hủy sẽ không thể thay đổi được nữa?')" })
+                </th>
+            }
+
+            <th> <a href="@Url.Action("ShowOrder", "CreateOrder", new { idhd = @pro.Id})"> chi tiết</a></th>
+
+
+            @*<th>@Html.Action("ShowOrder", "CreateOrder", new { idhd = @pro.Id})</th>*@
+            @*| @Html.ActionLink("Sửa", "EditPro/" + pro.Id, "Product") | @Html.ActionLink("Xoá", "Delete/" + pro.Id, "Product", null, new { onclick = "return confirm('Bạn có chắc xóa?')" })</th>*@
+        </tr>
+    }
+                }
+            </tbody>
+        </table>
+    </div>
+}
+else
+{
+    Layout = "~/Views/Shared/_LayoutAdmin2.cshtml";
+    <div>Bạn chưa đăng nhập, click vào @Html.ActionLink("Đây", "Login", "Login") để đăng nhập</div>
+}
+

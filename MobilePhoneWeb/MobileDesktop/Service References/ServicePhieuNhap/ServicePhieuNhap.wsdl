@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServicePhieuNhap" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:3015/ServicePhieuNhap.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:3015/ServicePhieuNhap.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:3015/ServicePhieuNhap.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfMobile" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServicePhieuNhap_SelectPhieuNhap_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectPhieuNhap" />
+  </wsdl:message>
+  <wsdl:message name="IServicePhieuNhap_SelectPhieuNhap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectPhieuNhapResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicePhieuNhap_InsertPhieuNhap_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPhieuNhap" />
+  </wsdl:message>
+  <wsdl:message name="IServicePhieuNhap_InsertPhieuNhap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPhieuNhapResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicePhieuNhap_UpdatePhieuNhap_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePhieuNhap" />
+  </wsdl:message>
+  <wsdl:message name="IServicePhieuNhap_UpdatePhieuNhap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePhieuNhapResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicePhieuNhap_DeletePhieuNhap_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePhieuNhap" />
+  </wsdl:message>
+  <wsdl:message name="IServicePhieuNhap_DeletePhieuNhap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePhieuNhapResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicePhieuNhap_SelectCTPN_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectCTPN" />
+  </wsdl:message>
+  <wsdl:message name="IServicePhieuNhap_SelectCTPN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectCTPNResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicePhieuNhap_SelectCTPN_ByMaPN_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectCTPN_ByMaPN" />
+  </wsdl:message>
+  <wsdl:message name="IServicePhieuNhap_SelectCTPN_ByMaPN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectCTPN_ByMaPNResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicePhieuNhap_InsertCTPN_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCTPN" />
+  </wsdl:message>
+  <wsdl:message name="IServicePhieuNhap_InsertCTPN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCTPNResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicePhieuNhap_UpdateCTPN_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCTPN" />
+  </wsdl:message>
+  <wsdl:message name="IServicePhieuNhap_UpdateCTPN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCTPNResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicePhieuNhap_DeleteCTPN_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCTPN" />
+  </wsdl:message>
+  <wsdl:message name="IServicePhieuNhap_DeleteCTPN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCTPNResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicePhieuNhap_GetNewIDPhieuNhap_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewIDPhieuNhap" />
+  </wsdl:message>
+  <wsdl:message name="IServicePhieuNhap_GetNewIDPhieuNhap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewIDPhieuNhapResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicePhieuNhap_UpdateSoLuongSanPham_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSoLuongSanPham" />
+  </wsdl:message>
+  <wsdl:message name="IServicePhieuNhap_UpdateSoLuongSanPham_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSoLuongSanPhamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicePhieuNhap_ThongkeSPNhapThang_InputMessage">
+    <wsdl:part name="parameters" element="tns:ThongkeSPNhapThang" />
+  </wsdl:message>
+  <wsdl:message name="IServicePhieuNhap_ThongkeSPNhapThang_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ThongkeSPNhapThangResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServicePhieuNhap">
+    <wsdl:operation name="SelectPhieuNhap">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicePhieuNhap/SelectPhieuNhap" message="tns:IServicePhieuNhap_SelectPhieuNhap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicePhieuNhap/SelectPhieuNhapResponse" message="tns:IServicePhieuNhap_SelectPhieuNhap_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertPhieuNhap">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicePhieuNhap/InsertPhieuNhap" message="tns:IServicePhieuNhap_InsertPhieuNhap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicePhieuNhap/InsertPhieuNhapResponse" message="tns:IServicePhieuNhap_InsertPhieuNhap_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePhieuNhap">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicePhieuNhap/UpdatePhieuNhap" message="tns:IServicePhieuNhap_UpdatePhieuNhap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicePhieuNhap/UpdatePhieuNhapResponse" message="tns:IServicePhieuNhap_UpdatePhieuNhap_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePhieuNhap">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicePhieuNhap/DeletePhieuNhap" message="tns:IServicePhieuNhap_DeletePhieuNhap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicePhieuNhap/DeletePhieuNhapResponse" message="tns:IServicePhieuNhap_DeletePhieuNhap_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectCTPN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicePhieuNhap/SelectCTPN" message="tns:IServicePhieuNhap_SelectCTPN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicePhieuNhap/SelectCTPNResponse" message="tns:IServicePhieuNhap_SelectCTPN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectCTPN_ByMaPN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicePhieuNhap/SelectCTPN_ByMaPN" message="tns:IServicePhieuNhap_SelectCTPN_ByMaPN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicePhieuNhap/SelectCTPN_ByMaPNResponse" message="tns:IServicePhieuNhap_SelectCTPN_ByMaPN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCTPN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicePhieuNhap/InsertCTPN" message="tns:IServicePhieuNhap_InsertCTPN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicePhieuNhap/InsertCTPNResponse" message="tns:IServicePhieuNhap_InsertCTPN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCTPN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicePhieuNhap/UpdateCTPN" message="tns:IServicePhieuNhap_UpdateCTPN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicePhieuNhap/UpdateCTPNResponse" message="tns:IServicePhieuNhap_UpdateCTPN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCTPN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicePhieuNhap/DeleteCTPN" message="tns:IServicePhieuNhap_DeleteCTPN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicePhieuNhap/DeleteCTPNResponse" message="tns:IServicePhieuNhap_DeleteCTPN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewIDPhieuNhap">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicePhieuNhap/GetNewIDPhieuNhap" message="tns:IServicePhieuNhap_GetNewIDPhieuNhap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicePhieuNhap/GetNewIDPhieuNhapResponse" message="tns:IServicePhieuNhap_GetNewIDPhieuNhap_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSoLuongSanPham">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicePhieuNhap/UpdateSoLuongSanPham" message="tns:IServicePhieuNhap_UpdateSoLuongSanPham_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicePhieuNhap/UpdateSoLuongSanPhamResponse" message="tns:IServicePhieuNhap_UpdateSoLuongSanPham_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ThongkeSPNhapThang">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicePhieuNhap/ThongkeSPNhapThang" message="tns:IServicePhieuNhap_ThongkeSPNhapThang_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicePhieuNhap/ThongkeSPNhapThangResponse" message="tns:IServicePhieuNhap_ThongkeSPNhapThang_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServicePhieuNhap" type="tns:IServicePhieuNhap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SelectPhieuNhap">
+      <soap:operation soapAction="http://tempuri.org/IServicePhieuNhap/SelectPhieuNhap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertPhieuNhap">
+      <soap:operation soapAction="http://tempuri.org/IServicePhieuNhap/InsertPhieuNhap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePhieuNhap">
+      <soap:operation soapAction="http://tempuri.org/IServicePhieuNhap/UpdatePhieuNhap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePhieuNhap">
+      <soap:operation soapAction="http://tempuri.org/IServicePhieuNhap/DeletePhieuNhap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectCTPN">
+      <soap:operation soapAction="http://tempuri.org/IServicePhieuNhap/SelectCTPN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectCTPN_ByMaPN">
+      <soap:operation soapAction="http://tempuri.org/IServicePhieuNhap/SelectCTPN_ByMaPN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCTPN">
+      <soap:operation soapAction="http://tempuri.org/IServicePhieuNhap/InsertCTPN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCTPN">
+      <soap:operation soapAction="http://tempuri.org/IServicePhieuNhap/UpdateCTPN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCTPN">
+      <soap:operation soapAction="http://tempuri.org/IServicePhieuNhap/DeleteCTPN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewIDPhieuNhap">
+      <soap:operation soapAction="http://tempuri.org/IServicePhieuNhap/GetNewIDPhieuNhap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSoLuongSanPham">
+      <soap:operation soapAction="http://tempuri.org/IServicePhieuNhap/UpdateSoLuongSanPham" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ThongkeSPNhapThang">
+      <soap:operation soapAction="http://tempuri.org/IServicePhieuNhap/ThongkeSPNhapThang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicePhieuNhap">
+    <wsdl:port name="BasicHttpBinding_IServicePhieuNhap" binding="tns:BasicHttpBinding_IServicePhieuNhap">
+      <soap:address location="http://localhost:3015/ServicePhieuNhap.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

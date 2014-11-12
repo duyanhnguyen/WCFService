@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d6cd4874-be70-4bb1-af0c-cbf4a64357b2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:3015/ServicePhieuNhap.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServicePhieuNhap.xsd" MetadataType="Schema" ID="b9e4480d-d996-44fe-b351-41f1d231f78e" SourceId="1" SourceUrl="http://localhost:3015/ServicePhieuNhap.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServicePhieuNhap1.xsd" MetadataType="Schema" ID="4a6fd38f-df8f-49e6-844f-70151f092a90" SourceId="1" SourceUrl="http://localhost:3015/ServicePhieuNhap.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServicePhieuNhap.wsdl" MetadataType="Wsdl" ID="e1278c56-aed0-4e89-9dcd-3d7fdb519ecb" SourceId="1" SourceUrl="http://localhost:3015/ServicePhieuNhap.svc?wsdl" />
+    <MetadataFile FileName="ServicePhieuNhap2.xsd" MetadataType="Schema" ID="758ffa61-49f9-4e65-83e8-0ee76c40bd2b" SourceId="1" SourceUrl="http://localhost:3015/ServicePhieuNhap.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServicePhieuNhap.disco" MetadataType="Disco" ID="c51f7ae0-8266-4934-ab70-24663d60e184" SourceId="1" SourceUrl="http://localhost:3015/ServicePhieuNhap.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

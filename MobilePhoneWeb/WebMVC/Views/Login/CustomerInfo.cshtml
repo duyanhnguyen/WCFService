@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "CustomerInfo";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+@model WebMobile.ServiceReferenceCustomer.Customer
+<div class="group product clearfix">
+    <div class="header2">
+        <span class="title">
+            <span>
+                <a>Thông Tin Khách Hàng</a>
+            </span>
+        </span>
+    </div>
+</div>
+<div class="box-pro-home" style="font-size:13px; padding-top: 10px;">
+    <div style="height:100%; width: 100%; text-align: right; padding-left:6px">
+        <table class="table-condensed">
+            <tbody>
+                <tr>
+                </tr>
+                <tr>
+                    <td style="font-weight:bold; width:120px">Tên người dùng:</td>
+                    <td style="text-align:left">@Html.DisplayFor(model => model.Name)<br /></td>
+                </tr>
+                <tr>
+                    <td style="font-weight:bold">Tên đăng nhập:</td>
+                    <td style="text-align:left">@Html.DisplayFor(model => model.UserName)</td>
+                </tr>
+                <tr>
+                    <td style="font-weight:bold">Email:</td>
+                    <td style="text-align:left">@Html.DisplayFor(model => model.Email)</td>
+                </tr>
+                <tr>
+                    <td style="font-weight:bold">Số điện thoại:</td>
+                    <td style="text-align:left">@Html.DisplayFor(model => model.Phone)</td>
+                </tr>
+                <tr>
+                    <td style="font-weight:bold">Địa chỉ:</td>
+                    <td style="text-align:left">@Html.DisplayFor(model => model.Address)</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td align="left">
+                        @Html.ActionLink("Sửa thông tin cá nhân", "ChangeInfo/"+ Model.Id,"Login")
+                    </td>
+                </tr>
+            </tbody>
+        </table>       
+    </div>
+</div>

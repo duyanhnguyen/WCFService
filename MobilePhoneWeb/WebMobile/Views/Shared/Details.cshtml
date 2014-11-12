@@ -1,0 +1,26 @@
+﻿@model IEnumerable<WebMobile.Models.Products>
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+<div>
+    @foreach(var pro in Model)
+    {
+    <div>
+        <img src="@Html.DisplayFor(i => pro.IMAGES)" width="150" height="150" />
+    </div>
+    <div>
+        <div>
+            <p> @pro.NAME </p>
+        </div>
+        <div>
+            <p>Giá @pro.PRICE VNĐ</p>
+        </div>
+        <div>
+            <p>@MvcHtmlString.Create(pro.DETAILS)</p>
+        </div>
+            @Html.ActionLink("Thêm vào giỏ", "addtocart", new { id = pro.ID }, new { @Style = "font-weight:bold; color:#ff6a00" })
+    </div>
+    
+    }
+</div>

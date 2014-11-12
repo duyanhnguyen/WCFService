@@ -1,0 +1,19 @@
+﻿<div class="topheader">
+    <div class="topheader-inner w1020px marginauto">
+        <ul class="pull-right">
+           
+                @if (Session["LogedId"] == null)
+                {
+                     <li>@Html.ActionLink("Đăng nhập","Login","Login")</li><li>@Html.ActionLink("Đăng ký tài khoản?", "LogOn", "Login")</li>
+                }
+                else
+                {
+                    <li><span style="color:#0ff; font-weight:bold">
+                        <strong style="color:#ffffff">
+                            Xin Chào ! @Session["LogedName"] | @Html.ActionLink("Thông tin cá nhân", "CustomerInfo", "Login") | @Html.ActionLink("LogOut", "LogOut", "Login")
+                        </strong>
+                    </span></li>  
+                }
+            </ul>
+    </div>
+</div>

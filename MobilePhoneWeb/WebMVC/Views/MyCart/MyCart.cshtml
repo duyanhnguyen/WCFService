@@ -1,0 +1,110 @@
+﻿@{
+    ViewBag.Title = "MyCart";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+<script type="text/javascript">
+    $(function () {
+        $('.RemoveLink').click(function () {
+            var x = $(this).attr("data-id");
+            if (confirm("Đối tượng sẽ bị xóa.Bạn có muốn không ?")) {
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("DeleteCart", "MyCart")',
+                    data: { id: x }
+                });
+                $("#row-" + x).remove();
+            }
+        })
+    })
+</script>
+<link href="~/Content/Qstyle.css" rel="stylesheet" />
+<div class="main-cart">
+    <div style="float:right">@Html.ActionLink("Xóa hết", "ClearAll", "mycart")</div>
+    <div id="carttitle">
+        <h1>
+            <span id="ctl00_MainContentHolder_TitleLabel">Thông tin giỏ hàng</span>
+        </h1>
+        
+    </div>
+    <div id="ctl00_MainContentHolder_pnlWholeCart">
+        
+        <div id="cartcontainer">         
+            <div>
+                <table id="ctl00_MainContentHolder_ItemGridView" class="cartproductgrid" border="0" style="width:100%; border-collapse:collapse; color:black; margin: 0px auto;">
+                    <thead class="head-cart">
+                        <tr>
+                            <th align="left" scope="col">Tên sản phẩm</th>
+                            <th align="right" scope="col">Đơn giá</th>
+                            <th style="width:60px;" align="right" scope="col">Số lượng</th>
+                            <th style="padding-left:20px;" align="right" scope="col">Thành tiền</th>
+                            <th scope="col" width="150px" align="right">Tùy Chọn</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                       
+                        @foreach (var item in WebMobile.Models.MySession.GioHang)
+                        {
+                            <tr style="height:10px;"></tr>
+                            <tr>
+                                <td style="width:175px;" class="productdetailscolumn" valign="top">
+                                    <div id="ctl00_MainContentHolder_ItemGridView_ctl02_cartitemdescription" class="cartitemdescription">
+                                        @Html.DisplayFor(m => item.NAME)
+                                    </div>
+                                </td>
+                                <td style="width:100px;" class="productpricecolumn" valign="top" align="right">
+                                    <span class="cartproductprice">@String.Format("{0:0,0}", Convert.ToInt32(item.PRICE))</span>
+                                </td>
+                                <td style="width:100px;" class="productquantitycolumn" valign="top" align="right">
+                                    @using (Html.BeginForm("UpdateCart", "MyCart"))
+                                    {
+                                        @Html.TextBox("USoLuong", @Html.DisplayFor(m => item.NUMBER), new { @Style = "width:20px;" })
+                                        @Html.TextBox("UMaSanPham", @Html.DisplayFor(m => item.ID), new { @Type = "hidden" })
+                                        <input type="submit" style="border-width:0px; cursor:pointer;" value="Cập nhật">
+                                    }
+                                </td>
+                                <td style="padding-left:20px; width: 160px;" class="producttotalcolumn" valign="top" align="right">
+                                    <span class="lineitemnodiscounts"></span>
+                                    <span class="product-price">@String.Format("{0:0,0}", Convert.ToInt32(item.COUNT))</span>
+                                </td>
+                                <td class="productdeletecolumn" valign="top" align="right">
+                                    <a href="../MyCart/DeleteCart/@Html.DisplayFor(m => item.ID)" class="RemoveLink" data-id="@item.ID">Xóa</a>
+                                </td>
+                            </tr>
+                        }
+                        <tr>
+                            <th colspan="5">@ViewBag.Thongbao</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!--Cat xuong duoi-->
+    </div>
+    <div class="cartfooter">
+        <div id="carttotals">
+            <table cellspacing="0" cellpadding="3" border="0">
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td width="20">           </td>
+                        <td class="formlabel"> Tổng tiền:</td>
+                        <td class="formfield">
+                            <span id="ctl00_MainContentHolder_lblSubTotal">@String.Format("{0:0,0 Vnđ}", Convert.ToInt32(@WebMobile.Models.MySession.COUNT))</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+    <table>
+        <tr>
+            <td width="280px"></td>
+            <td>
+                @Html.ActionLink("Mua thêm", "Index", "Index") | @Html.ActionLink("Đặt hàng", "Create", "CreateOrder")
+            </td>       
+            <td></td>
+        </tr>
+    </table>
+
+</div>
